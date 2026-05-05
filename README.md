@@ -48,3 +48,4 @@ idk
 ## Project status
 Pretty much done, it works the way I want it to but if someone finds me and recommends someting it might get added.
 Unless they find me in the shower in which case what the hell man get out.
+Oh and add options to have the backup run at certain times by using cron!
