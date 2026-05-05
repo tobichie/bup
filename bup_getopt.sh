@@ -11,7 +11,7 @@
 # Tool for backing up files quickly 
 # Description: Can backup files in directories on other networks hosts using smb 
 # Author: Tyron Obichie
-# Version: 2.0
+# Version: 2.1
 # Usage: bup <source.txt> <192.168.10.194> <username> <password123> <share> <destination path>
 
 help() {
@@ -24,13 +24,14 @@ help() {
 "\$4 = destination share (e.g. homes)" \
 "\$5 = path within the shared folder"
         printf "%s\n%s\n" "This scripts main purpose is to make it easier to backup files across the network, " "although it can be used to backup files to the localhost."
+        printf "%s\n" "bup -s ./source.txt -H 192.168.10.101 -u admin -S homes -d User/destination"
 }
 
 printf "%s\n" "Running script: $0"
 ## -options help,verbose, source, host, username, share, destination path
 ## Parse options from commandline
-OPTS=$(getopt -o hvs:H:u:S:d: \
-  --long help,verbose,source:,host:,username:,share:,destination: \
+OPTS=$(getopt -o hs:H:u:S:d: \
+  --long help,source:,host:,username:,share:,destination: \
   -n "$0" -- "$@")
 if [ "$?" -ne 0 ]; then
 	echo "Failed to parse options" >&2
