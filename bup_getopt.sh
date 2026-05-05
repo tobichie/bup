@@ -41,7 +41,6 @@ fi
 ## eval set -- "$OPTS" changed the positional arguments to match the options ($1 becomes -h)
 eval set -- "$OPTS"
 ## initialise variables
-HELP=false
 VERBOSE=false
 source=""
 host=""
