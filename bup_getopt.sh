@@ -48,6 +48,13 @@ username=""
 share=""
 destination=""
 
+## If no opts and args -> help; exit 1
+
+
+if [ "$#" -eq 1 ]; then
+	help
+	exit 1
+fi
 ## Process the options
 
 while true; do
