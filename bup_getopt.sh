@@ -54,7 +54,6 @@ destination=""
 while true; do
     case "$1" in
         -h|--help)
-            echo "help"
             HELP=true
             shift
             ;;
@@ -98,7 +97,11 @@ while true; do
             ;;
     esac
 done
-
+# If help is used, show usage and exit immediately
+if [[ -n "$HELP" ]]; then
+	help
+	exit 0
+fi
 # If smbclient isnt installed exit immediately
 command -v smbclient >/dev/null 2>&1 || {
     echo "Error: smbclient is required"
@@ -106,7 +109,7 @@ command -v smbclient >/dev/null 2>&1 || {
 }
 
 
-if [ "$host" = "localhost" ] || [ -z "$host" ]; then smb=false && printf "%s\n" "Not using smb, using localhost"; else smb=true && printf "%s\n" "Using smb to connect "; fi
+if [ "$host" = "localhost" ] || [ -z "$host" ] || [ -n "$HELP" ]; then smb=false && printf "%s\n" "Not using smb, using localhost"; else smb=true && printf "%s\n" "Using smb to connect "; fi
 
 if [[ -n "$username" || "$smb" = false ]]; then
         if [ "$smb" = false ]; then
