@@ -36,18 +36,22 @@ Options:\
 -u/--username: The username required to login to the smbserver.\
 -S/--share: The share containing the destination Path.\
 -d/--destination: The destination path on the remote/local host.\
+
 # Example Usage\
 
 bup -s/--source <source dir/file> -H/--host <hostname> -u/--username <username> -S/--share <share> -d/--destination <destination path>\
 bup -s ./source.txt -H 192.168.10.101 -u admin -S homes -d User/destination\
+
 ## Support\
 
 Contact me if you can find me. Otherwise tough luck buddy.\
+
 ## Contributing\
 
 Open to contributions if you can find and message me.\
 
-## Project status
+## Project status\
+
 Pretty much done, it works the way I want it to but if someone finds me and recommends someting it might get added.\
 Unless they find me in the shower in which case what the hell man get out.\
 Oh and add options to have the backup run at certain times by using cron!\
