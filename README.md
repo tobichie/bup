@@ -2,7 +2,7 @@
 
 ## Name
 
-**bup! The greatest backup tool to ever be made!**
+**bup! The greatest backup tool to ever be made! Can't to incremental backups though**
 
 ## Description
 
