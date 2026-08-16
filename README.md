@@ -21,7 +21,7 @@ No Windows support.
 Download the script from the Git website or clone it to a local directory:
 
 ```bash
-git clone https://git.ide3.de/tyobi/bup
+https://github.com/tobichie/bup.git
 ```
 
 Make it executable:
