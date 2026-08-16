@@ -4,7 +4,7 @@
 bup! The greatest backup tool to ever be made!
 
 ## Description
-Long Options: \help, source, host, username, share, destination path\\
+Long Options: \help, source, host, username, share, destination path\
 Short Options: hs:H:u:S:d: \
 This scripts main purpose is to make it easier to backup files across the network, 
 It can be used to backup files to the localhost by omitting the hostname or using the argument 'localhost' but at that point
@@ -30,7 +30,7 @@ bup # Will show usage\
 ----------
 ## Usage
 
-Options:\\
+Options:\
 -s/--source: The directory/file that is being backed up.\
 -H/--host: The hostname (can be a remote host, localhost or empty).\
 -u/--username: The username required to login to the smbserver.\
