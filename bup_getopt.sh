@@ -129,7 +129,6 @@ if [[ -n "$username" || "$smb" = false ]]; then
         else
                 if ping -c 3 "$host" &>/dev/null; then
                         printf "%s\n" "Host is online"
-                        # since the host is online we will be using the username and password provided to list the shares
                         # smbclient "//$2/$share" -U "$username%$password" -c "cd /${share};ls;put ${source}"
                         # smbclient "//$2/$share" -U "$username%$password" -c "cd \"$path\"; ls; put \"$source\""
                         if [ -f "$source" ]; then
