@@ -27,8 +27,9 @@ https://github.com/tobichie/bup.git
 Make it executable:
 
 ```bash
-chmod +x ./bup.sh
-chmod 744 ./bup.sh
+cd ./bup
+chmod +x ./bup_getopt.sh
+chmod 744 ./bup_getopt.sh
 ```
 
 If you want to be able to use it like other commands (from anywhere and without the file extension), move it into a directory contained in your `$PATH`.
@@ -42,7 +43,7 @@ echo $PATH
 Then move and rename the script:
 
 ```bash
-mv ./bup.sh /usr/bin/bup
+mv ./bup_getopt.sh /usr/bin/bup
 ```
 
 `/usr/bin` is a standard directory for executable programs.
